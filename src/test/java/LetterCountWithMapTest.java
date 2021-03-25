@@ -13,7 +13,7 @@ public class LetterCountWithMapTest {
     }
 
     @Test
-    public void oneLetter() {
+    public void countLetters_whenOneLetter_returnOneLetterSummary() {
         LetterSummary[] actual = LetterCountWithMap.countLetters("a");
 
         assertThat(actual).hasSize(1);

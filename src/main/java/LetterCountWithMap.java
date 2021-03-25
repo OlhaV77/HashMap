@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class LetterCountWithMap {
 
     public static void main(String[] args) {
@@ -19,23 +21,21 @@ public class LetterCountWithMap {
             return result;
         }
 
-        int count = 0;
         LetterSummary letterSummary = new LetterSummary();
-
-        letterSummary.letter = letter;
+        String let = letter.substring(0, 1);
+        letterSummary.letter = let;
         letterSummary.count = 1;
-
         result[0] = letterSummary;
+        if (letter.length() == 1) {
+            return result;
+        }
 
+        LetterSummary letterTwoSummary = new LetterSummary();
+        String str = letter.substring(1, 2);
+        letterTwoSummary.letter = str;
+        letterTwoSummary.count = 1;
+        result[1] = letterTwoSummary;
 
-//        for (int i = 0; i < letter.toCharArray().length; i++) {
-//
-////                count++;
-//
-//
-//            String str = letter.substring(i); // remove
-//
-//        }
 
         return result;
     }
