@@ -22,8 +22,8 @@ public class LetterCountWithMap {
         }
 
         LetterSummary letterSummary = new LetterSummary();
-        String let = letter.substring(0, 1);
-        letterSummary.letter = let;
+        String oneLetter = letter.substring(0, 1);
+        letterSummary.letter = oneLetter;
         letterSummary.count = 1;
         result[0] = letterSummary;
         if (letter.length() == 1) {
@@ -31,12 +31,22 @@ public class LetterCountWithMap {
         }
 
         LetterSummary letterTwoSummary = new LetterSummary();
-        String str = letter.substring(1, 2);
-        letterTwoSummary.letter = str;
+        String twoLetter = letter.substring(1, 2);
+        letterTwoSummary.letter = twoLetter;
         letterTwoSummary.count = 1;
         result[1] = letterTwoSummary;
+        if (letter.length() == 2) {
+            return result;
+        }
 
-
+        LetterSummary letterThreeSummary = new LetterSummary();
+        String threeLetter = letter.substring(2, 3);
+        letterThreeSummary.letter = threeLetter;
+        letterThreeSummary.count = 1;
+        result[2] = letterThreeSummary;
+        if (letter.length() == 3) {
+            return result;
+        }
         return result;
     }
 }
