@@ -4,7 +4,7 @@ import java.util.Map;
 public class LetterCount {
     public static void main(String[] args) {
         String[] abc = {"a", "b", "c", "d" , "a" , "d", "d"};
-       letter(abc);
+        letter(abc);
     }
 
     static Map<String, Integer> letter(String[] abc) {
@@ -21,6 +21,7 @@ public class LetterCount {
         System.out.println(map);
         return map;
     }
+
 
 
 }
