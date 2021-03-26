@@ -23,10 +23,13 @@ public class LetterCountWithMap {
 
         int length = letter.length();
 
+        // "abca"
+
         for(int i = 0; i < length; i++) {
+            String singleLetter = letter.substring(0, 1);
+
             LetterSummary letterSummary = new LetterSummary();
-            String oneLetter = letter.substring(0, 1);
-            letterSummary.letter = oneLetter;
+            letterSummary.letter = singleLetter;
             letterSummary.count = 1;
             result[i] = letterSummary;
             if (letter.length() == 1) {
