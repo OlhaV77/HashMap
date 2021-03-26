@@ -22,16 +22,23 @@ public class LetterCountWithMap {
         }
 
         LetterSummary letterSummary = new LetterSummary();
-        String oneLetter = letter.substring(0, 1);
-        letterSummary.letter = oneLetter;
+        letterSummary.letter = letter.substring(0, 1);
         letterSummary.count = 1;
-        result[0] = letterSummary;
-        if (letter.length() == 1) {
-            return result;
+        for(int i = 0; i < result.length; i++) {
+            result[i] = letterSummary;
+            if (letter.length() == 1) {
+                return result;
+            }
+
+            letter = letter.substring(1);
         }
 
-        letter = letter.substring(1);
 
+
+
+
+
+       /*
         LetterSummary letterTwoSummary = new LetterSummary();
         letterTwoSummary.letter = letter.substring(0, 1);
         letterTwoSummary.count = 1;
@@ -51,14 +58,21 @@ public class LetterCountWithMap {
         }
 
 
-//       LetterSummary letterFourSummary = new LetterSummary();
-//      // letterFourSummary.letter = letter.substring(0,1);
-//       for(int i = 0; i  < letter.length(); i++){
-//           if(letterFourSummary.letter.equals(letter.substring(0, 1))){
-//               letterFourSummary.count++;
-//           }
-//           result[3] = letterFourSummary;
-//       }
+
+
+       LetterSummary letterFourSummary = new LetterSummary();
+       letterFourSummary.letter = letter.substring(0,1);
+       for(int i = 0; i  < letter.length(); i++){
+           if(letterFourSummary.letter.equals(letter.substring(0, 1))){
+               letterFourSummary.count++;
+           }
+        result[3] = letterFourSummary;
+           if(letter.length() == 2){
+               return  result;
+           }
+      }
+
+        */
 
         return result;
     }
