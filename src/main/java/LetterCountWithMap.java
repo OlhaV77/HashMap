@@ -30,25 +30,40 @@ public class LetterCountWithMap {
             return result;
         }
 
+        letter = letter.substring(1);
+
         LetterSummary letterTwoSummary = new LetterSummary();
-        String twoLetter = letter.substring(1, 2);
-        letterTwoSummary.letter = twoLetter;
+        letterTwoSummary.letter = letter.substring(0, 1);
         letterTwoSummary.count = 1;
         result[1] = letterTwoSummary;
-        if (letter.length() == 2) {
+        if (letter.length() == 1) {
             return result;
         }
 
+        letter = letter.substring(1);
+
         LetterSummary letterThreeSummary = new LetterSummary();
-        String threeLetter = letter.substring(2, 3);
-        letterThreeSummary.letter = threeLetter;
+        letterThreeSummary.letter = letter.substring(0, 1);
         letterThreeSummary.count = 1;
         result[2] = letterThreeSummary;
-        if (letter.length() == 3) {
+        if (letter.length() == 1) {
             return result;
         }
+
+
+//       LetterSummary letterFourSummary = new LetterSummary();
+//      // letterFourSummary.letter = letter.substring(0,1);
+//       for(int i = 0; i  < letter.length(); i++){
+//           if(letterFourSummary.letter.equals(letter.substring(0, 1))){
+//               letterFourSummary.count++;
+//           }
+//           result[3] = letterFourSummary;
+//       }
+
         return result;
     }
+
+
 }
 
 
