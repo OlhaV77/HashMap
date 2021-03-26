@@ -21,33 +21,19 @@ public class LetterCountWithMap {
             return result;
         }
 
-        LetterSummary letterSummary = new LetterSummary();
-        String oneLetter = letter.substring(0, 1);
-        letterSummary.letter = oneLetter;
-        letterSummary.count = 1;
-        result[0] = letterSummary;
-        if (letter.length() == 1) {
-            return result;
-        }
+        int length = letter.length();
 
-        letter = letter.substring(1);
+        for(int i = 0; i < length; i++) {
+            LetterSummary letterSummary = new LetterSummary();
+            String oneLetter = letter.substring(0, 1);
+            letterSummary.letter = oneLetter;
+            letterSummary.count = 1;
+            result[i] = letterSummary;
+            if (letter.length() == 1) {
+                return result;
+            }
 
-        LetterSummary letterTwoSummary = new LetterSummary();
-        letterTwoSummary.letter = letter.substring(0, 1);
-        letterTwoSummary.count = 1;
-        result[1] = letterTwoSummary;
-        if (letter.length() == 1) {
-            return result;
-        }
-
-        letter = letter.substring(1);
-
-        LetterSummary letterThreeSummary = new LetterSummary();
-        letterThreeSummary.letter = letter.substring(0, 1);
-        letterThreeSummary.count = 1;
-        result[2] = letterThreeSummary;
-        if (letter.length() == 1) {
-            return result;
+            letter = letter.substring(1);
         }
 
         return result;

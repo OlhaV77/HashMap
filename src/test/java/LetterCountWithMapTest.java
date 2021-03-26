@@ -56,25 +56,27 @@ public class LetterCountWithMapTest {
         assertThat(actualThirdLetterSummary.count).isEqualTo(1);
         assertThat(actualThirdLetterSummary.letter).isEqualTo("c");
     }
+/*
+  @Test
+    public void fourLetter() {
+        LetterSummary[] actual = LetterCountWithMap.countLetters("abca");
 
-//   @Test
- //   public void fourLetter() {
-//        LetterSummary[] actual = LetterCountWithMap.countLetters("abca");
-//
-//       assertThat(actual).hasSize(3);
+       assertThat(actual).hasSize(4);
 
-//        LetterSummary actualFirstLetterSummary = actual[0];
-//        assertThat(actualFirstLetterSummary.count).isEqualTo(2);
-//        assertThat(actualFirstLetterSummary.letter).isEqualTo("a");
-//
-//        LetterSummary actualSecondLetterSummary = actual[1];
-//        assertThat(actualSecondLetterSummary.count).isEqualTo(1);
-//        assertThat(actualSecondLetterSummary.letter).isEqualTo("b");
-//
-//        LetterSummary actualThirdLetterSummary = actual[2];
-//        assertThat(actualThirdLetterSummary.count).isEqualTo(1);
-//        assertThat(actualThirdLetterSummary.letter).isEqualTo("c");
-//    }
+        LetterSummary actualFirstLetterSummary = actual[0];
+        assertThat(actualFirstLetterSummary.count).isEqualTo(2);
+        assertThat(actualFirstLetterSummary.letter).isEqualTo("a");
 
+        LetterSummary actualSecondLetterSummary = actual[1];
+        assertThat(actualSecondLetterSummary.count).isEqualTo(1);
+        assertThat(actualSecondLetterSummary.letter).isEqualTo("b");
+
+        LetterSummary actualThirdLetterSummary = actual[2];
+        assertThat(actualThirdLetterSummary.count).isEqualTo(1);
+        assertThat(actualThirdLetterSummary.letter).isEqualTo("c");
+    }
+
+
+ */
 
 }
