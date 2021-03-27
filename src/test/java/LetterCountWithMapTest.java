@@ -56,12 +56,20 @@ public class LetterCountWithMapTest {
         assertThat(actualThirdLetterSummary.count).isEqualTo(1);
         assertThat(actualThirdLetterSummary.letter).isEqualTo("c");
     }
-/*
-  @Test
-    public void fourLetter() {
+
+    @Test
+    public void sixLetter() {
+        LetterSummary[] actual = LetterCountWithMap.countLetters("abcdef");
+
+        assertThat(actual).hasSize(6);
+    }
+
+
+    @Test
+    public void fourLetter_whenOneRepeatingLetter_returns3LetterSummaryWithACount2() {
         LetterSummary[] actual = LetterCountWithMap.countLetters("abca");
 
-       assertThat(actual).hasSize(4);
+        assertThat(actual).hasSize(3);
 
         LetterSummary actualFirstLetterSummary = actual[0];
         assertThat(actualFirstLetterSummary.count).isEqualTo(2);
@@ -76,7 +84,5 @@ public class LetterCountWithMapTest {
         assertThat(actualThirdLetterSummary.letter).isEqualTo("c");
     }
 
-
- */
 
 }

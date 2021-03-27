@@ -2,10 +2,10 @@ import java.util.Arrays;
 
 public class LetterCountWithMap {
 
-    public static void main(String[] args) {
-        countLetters("abcb");
-        countLetters("abc");
-    }
+    //  public static void main(String[] args) {
+    //     countLetters("abcb");
+    //     countLetters("abc");
+    //  }
     // "a": 1  ... "bcb"
     // remove "a" from "abcb"
 
@@ -23,26 +23,40 @@ public class LetterCountWithMap {
 
         int length = letter.length();
 
-        // "abca"
-
-        for(int i = 0; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             String singleLetter = letter.substring(0, 1);
+
+            // singleLetter should be checked against existing results
+            // if found then increase count
+            // if not found then create new letterSummary
+
+            // create a new letterSummary
+
 
             LetterSummary letterSummary = new LetterSummary();
             letterSummary.letter = singleLetter;
-            letterSummary.count = 1;
+            letterSummary.count = 0;
             result[i] = letterSummary;
+
+            for (int j = 0; j < letter.length(); j++) {
+                if (singleLetter.equals(result[i].letter)) {
+                    letterSummary.count++;
+
+                } else {
+                    new LetterSummary();
+                }
+                letterSummary = new LetterSummary();
+            }
             if (letter.length() == 1) {
                 return result;
             }
 
             letter = letter.substring(1);
-        }
 
+
+        }
         return result;
     }
-
-
 }
 
 
