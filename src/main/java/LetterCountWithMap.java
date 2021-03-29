@@ -16,15 +16,15 @@ public class LetterCountWithMap {
     // "c": 1 ... "" - end
 
     static LetterSummary[] countLetters(String letter) {
-        LetterSummary[] result = new LetterSummary[letter.length()];
-        if (letter.length() == 0) {
+        LetterSummary[] result = new LetterSummary[letter.length()];          //object array
+        if (letter.length() == 0) {                                         // then string empty return result
             return result;
         }
 
-        int length = letter.length();
+        int length = letter.length();               // length
 
         for (int i = 0; i < length; i++) {
-            String singleLetter = letter.substring(0, 1);
+            String singleLetter = letter.substring(0, 1);             // single letter chooses letter(position(0,1)
 
             // singleLetter should be checked against existing results
             // if found then increase count
@@ -32,30 +32,35 @@ public class LetterCountWithMap {
 
             // create a new letterSummary
 
+            for (int j = 0; j < result.length; j++) {                                    // length = 6
 
-            LetterSummary letterSummary = new LetterSummary();
-            letterSummary.letter = singleLetter;
-            letterSummary.count = 0;
-            result[i] = letterSummary;
-
-            for (int j = 0; j < letter.length(); j++) {
-                if (singleLetter.equals(result[i].letter)) {
-                    letterSummary.count++;
-
-                } else {
+                if (singleLetter.equals(result[j])) {                          //result[j].letter = null   , single letter = a
+                    result[j].count++;
+                }
+                if (singleLetter.equals(result[j])) {
                     new LetterSummary();
                 }
-                letterSummary = new LetterSummary();
             }
+            LetterSummary letterSummary = new LetterSummary();           //create object
+            letterSummary.letter = singleLetter;                        //object letter = letter
+            letterSummary.count = 1;
+            result[i] = letterSummary;                                  // make  array  with objects
+
             if (letter.length() == 1) {
                 return result;
             }
 
-            letter = letter.substring(1);
-
-
+            letter = letter.substring(1);         //next letter = substring wish index(1) следуюшчая буква
         }
         return result;
+    }
+
+    void size(String[] letter, int count) {
+        String[] newArray = new String[letter.length];
+        for (int i = 0; i < count; i++) {
+            newArray[i] = letter[i];
+        }
+       LetterSummary[] len = new LetterSummary[newArray.length];
     }
 }
 
